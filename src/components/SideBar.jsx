@@ -6,8 +6,10 @@ import {
   UserIcon,
 } from "@heroicons/react/24/solid";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useGlobal } from "../context/context";
 const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
   const { logout } = useAuth0();
+  const { setMinutes } = useGlobal();
   return (
     <div ref={ref} className='fixed w-56 h-full bg-white shadow-md'>
       <div className='flex justify-center mt-6 mb-14'>
@@ -18,7 +20,10 @@ const SideBar = forwardRef(({ showNav, setShowNav }, ref) => {
 
       <div className='flex flex-col'>
         <Link
-          onClick={() => setShowNav(!showNav)}
+          onClick={() => {
+            setShowNav(!showNav);
+            setMinutes(9999);
+          }}
           to='/'
           className='hover:bg-[#F44033] hover:text-white duration-100 '>
           <div
