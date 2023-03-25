@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const {isAuthenticated } = useAuth0();
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 pb-10'>
       <TopBar showNav={showNav} setShowNav={setShowNav} />
       <Transition
         as={Fragment}
