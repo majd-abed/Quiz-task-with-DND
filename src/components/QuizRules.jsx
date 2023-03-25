@@ -5,7 +5,7 @@ const QuizRules = () => {
   const { setMinutes } = useGlobal();
   return (
     <div className='h-[calc(100vh_-_80px)] text-center'>
-      <div className='flex flex-col items-center pt-40 pb-10'>
+      <div className='flex flex-col items-center pt-40 pb-10 smx:pt-20'>
         <h1 className='text-5xl italic'>Welcome to our special Quiz!</h1>
         <ul className='text-2xl py-5 list-disc ml-10 text-left'>
           <li>
